@@ -8,7 +8,8 @@ from langchain_core.runnables.history import RunnableWithMessageHistory
 import streamlit as st
 import os
 
-OPENAI_ACCESS_TOKEN = "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"
+# Add openai access token here
+# OPENAI_ACCESS_TOKEN = 
 model="gpt-4-1106-preview"
 
 #setting up schema
