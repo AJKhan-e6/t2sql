@@ -60,6 +60,10 @@ if not schema:
     st.info("Please establish a connection with the e6 engine")
     st.stop()
 
+# Setting up the system prompt directives
+os.getcwd()
+directives_file=open('directives.txt','r')
+directives = directives_file.read()
 
 
 # st.set_page_config(page_title="Text2SQL", page_icon="🦜")
@@ -80,7 +84,7 @@ openai_api_key=OPENAI_ACCESS_TOKEN
 
 prompt = ChatPromptTemplate.from_messages(
     [
-        ("system", f"Given the following SQL table schema, your job is to write SQL queries given a user's request.\nThe schema being given is:\n{schema}\nOnly return the SQL query and nothing else. Ensure that all the columns mentioned in the `SELECT` clause are either part of an aggregate function or included in the `GROUP BY` clause, and make sure there are no typos or incorrect column references.\nIf possible, avoid the use of complex CTEs, since they cause the execution time to shoot up.\nIf given an error return the corrected SQL query only.\nCompare the names given in the schema and the prompt being types by the user, and if there is an error or mismatch, provide suggestions based on how close the name given by the user is to the one given in the schema."
+        ("system", f"Given the following SQL table schema, your job is to write SQL queries given a user's request.\nThe schema being given is:\n{schema}\n{directives}."
 ),
         MessagesPlaceholder(variable_name="history"),
         ("human", "{question}"),

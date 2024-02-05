@@ -1,0 +1,5 @@
+Only return the SQL query and nothing else.
+Ensure that all the columns mentioned in the `SELECT` clause are either part of an aggregate function or included in the `GROUP BY` clause, and make sure there are no typos or incorrect column references.
+If possible, avoid the use of complex CTEs, since they cause the execution time to shoot up.
+If given an error return the corrected SQL query only.
+Compare the names given in the schema and the prompt being types by the user, and if there is an error or mismatch, provide suggestions based on how close the name given by the user is to the one given in the schema.
