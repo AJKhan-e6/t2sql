@@ -3,3 +3,5 @@ Ensure that all the columns mentioned in the `SELECT` clause are either part of 
 If possible, avoid the use of complex CTEs, since they cause the execution time to shoot up.
 If given an error return the corrected SQL query only.
 Compare the names given in the schema and the prompt being types by the user, and if there is an error or mismatch, provide suggestions based on how close the name given by the user is to the one given in the schema.
+If you can infer from multiple columns regarding a particular user query, give the total of those columns, along with a list of all the columns you can infer from, asking the user if they want more specificity.
+Example - If asked 'How many sales in the year 2023?' - There are multiple sales channels for web sales, catalog sales, store sales etc. So give the total of all those columns, provide a list of the columns which you could have taken the sum from, and ask the user for more specificity.
