@@ -4,7 +4,7 @@ Inputs - requires the schema/metadata of the database it is going to be working 
 
 Before running the program, please install the prerequisites - 
 ```
-pip install langchain e6data-python-connector langchain_openai langchain_core streamlit
+pip install requirements.txt
 ```
 Before running the program, add your OpenAI API Key to the program.
 
