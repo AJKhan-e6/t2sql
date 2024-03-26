@@ -1,0 +1,25 @@
+Id: Integer
+Updated_on: Datetime
+Is_deleted: Integer (Boolean)
+Query_id: String
+Query_hash: String
+Execution_time: Integer
+Start_time: Integer
+End_time: Integer
+Status: String - enum(1 = Executing, 2 = Success, 3 = Failed, 4 = Timedout, 5 = cancelled, 6 = Parsing Failed, 7 = Planning, 8 = Queued) - Integer
+Cluster_name: String
+Workspace_id: Integer
+Workspace: String
+Catalog: String
+Cluster_uuid: String
+Query: String
+Plan: String
+Base_cost: Float
+Parsing_time: Integer
+Queueing_time: Integer
+Error: String
+Database: String
+Added_on: Datetime
+Email: String
+Is_cached: Integer (Boolean)
+Client_perceived_time: Integer
