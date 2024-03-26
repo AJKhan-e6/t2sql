@@ -1,7 +1,8 @@
-langchain==0.1.8
-langchain-community==0.0.21
-langchain-core==0.1.25
-langchain-experimental==0.0.51
-langchain-openai==0.0.6
-streamlit==1.31.0
-e6data-python-connector==2.1.9
+langchain
+langchain-community
+langchain-core
+langchain-experimental
+langchain-openai
+streamlit
+e6data-python-connector
+chromadb
