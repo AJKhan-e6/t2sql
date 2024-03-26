@@ -4,7 +4,7 @@ Inputs - requires the schema/metadata of the database it is going to be working 
 
 Before running the program, please install the prerequisites - 
 ```
-pip install requirements.txt
+pip install -r requirements.txt
 ```
 Before running the program, add your OpenAI API Key to the program.
 
